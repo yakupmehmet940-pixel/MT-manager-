@@ -1,0 +1,36 @@
+.class public Lcom/mymtmanager/MainActivity;
+.super Landroidx/appcompat/app/AppCompatActivity;
+.source "MainActivity.kt"
+
+# Field (Değişkenler)
+.field private final fileManager:Lcom/mymtmanager/FileManager;
+.field private leftCurrentPath:Ljava/lang/String;
+.field private rightCurrentPath:Ljava/lang/String;
+
+# Constructor (Sınıf Başlatıcı)
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
+
+    # fileManager = new FileManager()
+    new-instance v0, Lcom/mymtmanager/FileManager;
+    invoke-direct {v0}, Lcom/mymtmanager/FileManager;-><init>()V
+    iput-object v0, p0, Lcom/mymtmanager/MainActivity;->fileManager:Lcom/mymtmanager/FileManager;
+
+    return-void
+.endmethod
+
+# onCreate Metodu
+.method protected onCreate(Landroid/os/Bundle;)V
+    .registers 2
+
+    invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
+
+    # setContentView(R.layout.activity_main)
+    const v0, 0x7f0b001c
+    invoke-virtual {p0, v0}, Lcom/mymtmanager/MainActivity;->setContentView(I)V
+
+    return-void
+.endmethod
+      
